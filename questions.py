@@ -1,0 +1,21 @@
+questions = [
+    "May I ask how many adults, children, and pets will be joining you in your new home?",
+    "Would you like to narrow down your search to a specific city or county, or are you open to exploring different areas?",
+    "What type of area are you most interested in? Are you looking for an urban environment, a metropolitan area, a semi-urban setting, a small town, a village, or perhaps a micropolitan area?",
+    "What would be your ideal monthly budget for living expenses, including housing, utilities, and transportation?",
+    "How important is it for you to have essential services like hospitals, schools, and grocery stores nearby?",
+    "How significant is safety for you when choosing a neighborhood, particularly in terms of low crime rates and a strong community atmosphere?",
+    "How often do you participate in community events or local meetings? Is this something you'd like to continue in your new area?",
+    "How frequently do you plan to visit parks, recreational facilities, or engage in outdoor activities in your new neighborhood?",
+    "How much do cultural events, such as festivals or museum visits, play a role in your lifestyle? How many would you like to attend each year?",
+    "How important is it for you to live in a community with thriving local businesses, job opportunities, and a strong sense of belonging?",
+    "How often would you like to spend time in green spaces, parks, or near natural water bodies in your new area?",
+    "Do you plan to use a car for commuting? If so, how much time are you comfortable spending in the car each day?",
+    "How often do you anticipate using public transport, and how important is it for you to have convenient access to it?",
+    "How important is it for you to live in an area that is pedestrian-friendly and has good biking infrastructure? How often do you plan to walk or bike for your daily activities?",
+    "How important is it to you to live in a place with good air and water quality, as well as minimal noise and light pollution?",
+    "Is access to healthy food options and nearby grocery stores a significant factor in your decision-making process?",
+    "How crucial is it for you to live in an area with high housing standards, including well-maintained properties and infrastructure?",
+    "Do you or any family members have allergies (such as pollen) or specific health conditions that should be considered?",
+    "Is there anything specific that’s especially important to you in a new home, something that would be non-negotiable or a deal-breaker?"
+]

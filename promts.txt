@@ -1,0 +1,64 @@
+Sense of control
+Financial Stability: What is median individual income level for Stillorgan, Dublin, Ireland? If direct source is not available make an approximation based on other factors. Just give an approximate number, no explanation is needed, If there is a higher and lower threshold, please use an average number
+Job Security: What are unemployment rates for Letterkenny, Donegal, Ireland? If direct source is not available make an approximation based on other factors. Just give an approximate number, no explanation is needed, If there is a higher and lower threshold, please use an average number
+Housing Market Stability: Can you generate a score between 0-100 compared to other areas in Ireland for Greystones, Wicklow, Ireland for housing market stability. You can use housing price data from the Residential Property Price Register. For a better context a market with steady, moderate price growth could score higher than a market with rapid price fluctuations.
+Safety: What are crime rates for Letterkenny, Donegal, Ireland? If direct source is not available make an approximation based on other factors. Just give an approximate number, no explanation is needed, If there is a higher and lower threshold, please use an average number
+
+Health Equity:
+Access to Healthcare: What are number of healthcare facilities/providers per capita for Ballymun-Finglas, Dublin, Ireland? If direct source is not available make an approximation based on other factors. Just give an approximate number, no explanation is needed, If there is a higher and lower threshold, please use an average number
+Housing Standards: Can you generate a score between 0-100 compared to other areas in Ireland for Limerick City East, Limerick, Ireland for Housing Standards. You can use Use housing quality standards data from the Department of Housing, Planning and Local Government. For a better context, a area with good housing standards should score higher than a area with bad housing standards. The area with the highest percentage of homes meeting these standards should score 100.
+Environmental Quality: Can you generate a score between 0-100 compared to other areas in Ireland for Limerick City East, Limerick, Ireland for Environmental Quality. You can use air and water quality data from the Environmental Protection Agency. For a better context, a area with good air and water quality should score higher than a area with bad bad air and water. The area with the highest air and water quality should score 100.
+Healthy Food Choices: Can you generate a score between 0-100 compared to other areas in Ireland for Letterkenny, Dublin, Ireland for Healthy Food Choices. You can measure the availability of healthy food options from the Department of Agriculture, Food and the Marine. For a better context, areas with more healthy food options would score higher compared to areas with less healthy options. The area with the most healthy food options should score 100.
+
+Connection to Nature:
+Green and Blue Spaces: Use data on the number and accessibility of parks and bodies of water from local council websites or the Department of Rural and Community Development. The area having the highest number of and most accessible green and blue spaces would score 100.
+Biodiversity: Use data on the variety of plant and animal species. An area with a higher variety of species would score higher.
+Climate Resilience and Adaptation: Use data on the area's preparedness for climate change from the Department of Communications, Climate Action & Environment or local council websites. Areas with more climate resilience measures would score higher.
+
+Sense of Wonder:
+Distinctive Design: Measure architectural variety and uniqueness. The area having the highest score for distinctive design would score 100.
+Culture: Use data on the number of cultural institutions and events from CSO or the Department of Culture, Heritage and the Gaeltacht. An area with a high number of cultural institutions and events would score higher.
+Play and Recreation: Measure the availability of recreational facilities from Department of Tourism, Culture, Arts, Gaeltacht, Sport and Media or local council websites. Areas with more recreational options would score higher.
+
+Getting Around:
+Walking, Wheeling, and Cycling: Use walkability and bikeability scores from Walk Score or similar sources, if available for Ireland. The area having the highest score for walkability and bikeability would score 100.
+Public Transport: Use data on the availability and frequency of public transport services from the National Transport Authority. An area with a high level of public transport service would score higher.
+Cars: Use data on average commute time by car, availability of parking, and traffic congestion levels from CSO or Department of Transport. Areas with lower commute times, more availability of parking, and less congestion would score higher.
+
+Connected Communities:
+Belonging: Use surveys on community connectedness, if available. The area having the highest score for community belonging would score 100.
+Local Businesses and Jobs: Use number of local businesses per capita and local employment data from CSO. An area with a high number of local businesses and a high percentage of local employment would score higher.
+Local Services: Use data on the availability and quality of local services from Department of Rural and Community Development or local council websites. Areas with a greater number of quality local services would score higher.
+
+
+{
+    "a_sense_of_control": {
+        "cost_of_living": 70,
+        "essential_services": 85,
+        "safety": 90,
+        "influence_and_contribution": 40
+    },
+    "health_equity": {
+        "housing_standard": 80,
+        "air_noise_light": 75,
+        "food_choice": 70
+    },
+    "connection_to_nature": {
+        "green_and_blue_spaces": 65,
+        "biodiversity": 60,
+        "climate_resilience_and_adaptation": 65
+    },
+    "a_sense_of_wonder": {
+        "distinctive_design_and_culture": 75,
+        "play_and_recreation": 60
+    },
+    "getting_around": {
+        "car": 85,
+        "public_transport": 70,
+        "walking_and_cycling": 60
+    },
+    "connected_communities": {
+        "belonging": 75,
+        "local_business_and_jobs": 70
+    }
+}

@@ -1,0 +1,21 @@
+response1 = [
+    "I have a family of 2 adults",
+    "I am open to moving anywhere in Ireland",
+    "I prefer semi-urban environments",
+    "My monthly budget is around 3000 euros per month",
+    "I would like to have a hospital and grocery stores in vicinity of 5 kilometers",
+    "Safety is very important to me, I would like to live in a area with low crime rates",
+    "I attend around 3 such meetings in a year",
+    "I attend 7 such events in a year",
+    "I play Tennis about 3 times a year and visit gym and parks frequently",
+    "A sense of belonging and job opportunities are important to me, thriving local businesses is a plus to have",
+    "I visit beaches about once a month and other spaces about 3 times in a month",
+    "I have a car and use it for most of my commute, I spend around 30 minutes driving daily",
+    "I would also like to have good connectivity by public transport in the area where I live, I plan to use public transport atleast 2 times a week",
+    "Biking and pedestrian infra would be nice to have",
+    "Air and water quality are important to me",
+    "Healthy food options are nice to have and I will need grocery stores in the 5 km radius of my house",
+    "I would like to live in an area which has good-looking houses and well maintained infrastructure",
+    "No allergies or health conditions in our family",
+    "The house should be affordable and should have good public transport connectivity"
+]

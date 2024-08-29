@@ -1,0 +1,110 @@
+I am designing a tool which gathers user responses on questions around quality of life aspects for housing and recommends them areas to live in.
+I have decided to use 7 indexes of measuring quality of life with each one of them having multiple factors. Alongside these indexes to understand user demographics we also get number of adults, children and pets in the family
+Here is the information for the indexes
+First index is sense of control which has 4 factors in it cost of living, essential services, safety and influence and contribution
+Second index is a sense of wonder which has 2 factors play & recreation and distinctive design & culture
+Third index is connected communities which has 2 factors local business and jobs and belonging
+Fourth index is connection to nature which has 3 factors biodiversity, climate resilience and adaptation, and green and blue spaces
+Fifth index is getting around which has 3 factors cars, public transport and walking and cycling
+Sixth index is health equity which has 3 factors air noise light, food choice, and housing standards
+
+Here are the questions and responses gathered from a user on these indexes and factors:
+
+Index name: Demographics
+Factors: number of family members
+Question: How many adults, children and pets are in your household?
+User response: I have a family of 2 adults
+
+Index name: A sense of control
+Factors: cost of living
+Question: What is your ideal monthly budget for living expenses, including housing, utilities, and transportation?
+User response: My monthly budget is around 3000 euros per month
+
+Index name: A sense of control
+Factors: essential services
+Question: How critical is access to essential services like healthcare, schools, and grocery stores in your decision-making process?
+User response: I would like to have a hospital and grocery stores in vicinity of 5 kilometers
+
+Index name: A sense of control
+Factors: safety
+Question: How much do you value safety, including low crime rates and a strong community sense, in your neighborhood?
+User response: Safety is very important to me, I would like to live in a area with low crime rates
+
+Index name: A sense of control
+Factors: influence and contribution
+Question: How many community events or local governance meetings do you typically participate in each year?
+User response: I attend around 3 such meetings in a year
+
+Index name: A sense of wonder
+Factors: distinctive design and culture
+Question: How many cultural events (e.g., festivals, museum visits, theater performances) do you attend in a typical year?
+User response: I attend 7 such events in a year
+
+Index name: A sense of wonder
+Factors: play and recreation
+Question: Do you interact with recreational or sports facilities, parks, or other outdoor spaces? If yes, how many times per month?
+User response: I play Tennis about 3 times a year and visit gym and parks frequently
+
+Index name: Connected Communities
+Factors: local business & jobs and belonging
+Question: How important is it to you that your community has thriving local businesses, job opportunities, and fosters a strong sense of belonging?
+User response: A sense of belonging and job opportunities are important to me, thriving local businesses is a plus to have
+
+Index name: Connection to nature
+Factors: biodiversity, climate resilience & adaptation and green & blue spaces
+Question: How many times per month do you visit green spaces, parks, or natural water bodies?
+User response: I visit beaches about once a month and other spaces about 3 times in a month
+
+Index name: Getting Around
+Factors: car, public transport, walking and cycling
+Question: How do you prioritize transportation options, including access to public transport, car usage, and pedestrian-friendly infrastructure?
+User response: I have a car and use it for most of my commute, I would also like to have good connectivity by public transport in the area where I live
+
+Index name: Health Equity
+Factors: air, noise and light
+Question: How much do you value living in a place with good air and water quality, minimal noise pollution, and proper lighting?
+User response: Air and water quality are important to me
+
+Index name: Health Equity
+Factors: food choice
+Question: How significant is the availability of healthy food options and grocery stores in your choice of living area?
+User response: Healthy food options are nice to have and I will need grocery stores in the 5 km radius of my house
+
+Index name: Health Equity
+Factors: housing standard
+Question: How important is it for you to live in an area where housing standards are high, with well-maintained properties and infrastructure?
+User response: I would like to live in an area which has good-looking houses and well maintained infrastructure
+
+Here is the task, you have to create a JSON object which contains index, factor and score of 0 to 100 for each factor based on the questions and user response from above data
+Here is an example JSON, please use just the JSON structure for creating the output and do not use the numbers in JSON for your calculation
+
+{
+    "a_sense_of_control": {
+        "cost_of_living": 65,
+        "safety": 78,
+        "influence_and_contribution": 55
+    },
+    "health_equity": {
+        "housing_standard": 58,
+        "air_noise_light": 82,
+        "food_choice": 62
+    },
+    "connection_to_nature": {
+        "green_and_blue_spaces": 75,
+        "biodiversity": 68,
+        "climate_resilience_and_adaptation": 72
+    },
+    "a_sense_of_wonder": {
+        "distinctive_design_and_culture": 60,
+        "play_and_recreation": 70
+    },
+    "getting_around": {
+        "walking_and_cycling": 52,
+        "public_transport": 48,
+        "car": 68
+    },
+    "connected_communities": {
+        "belonging": 72,
+        "local_business_and_jobs": 58
+    },
+}
