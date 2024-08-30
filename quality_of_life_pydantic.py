@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class SenseOfControl(BaseModel):
     cost_of_living: int
+    essential_services: int
     safety: int
     influence_and_contribution: int
 
@@ -14,9 +15,9 @@ class HealthEquity(BaseModel):
 
 
 class ConnectionToNature(BaseModel):
-    housing_standard: int
-    air_noise_light: int
-    food_choice: int
+    biodiversity: int
+    climate_resilience_and_adaptation: int
+    green_and_blue_spaces: int
 
 
 class SenseOfWonder(BaseModel):

@@ -1,15 +1,18 @@
 import os
+
+import pandas as pd
 from openai import OpenAI
+
+from config import key
 from quality_of_life_pydantic import QualityOfLifeIndexes
 from questions import questions
 from responses import response1 as response
 
-
-os.environ["OPENAI_API_KEY"] = ("")
+os.environ["OPENAI_API_KEY"] = key
 
 
 def get_openai_response(prompt: str, model: str = "gpt-4o-mini", max_tokens: int = 500,
-                        temperature: float = 0.2) -> str:
+                        temperature: float = 0.2) -> QualityOfLifeIndexes:
     """
     Connects to the OpenAI API and submits a prompt, returning the response.
 
@@ -42,7 +45,7 @@ def get_openai_response(prompt: str, model: str = "gpt-4o-mini", max_tokens: int
         return chat_completion.choices[0].message.parsed
 
     except Exception as e:
-        return f"An error occurred: {e}"
+        raise Exception(f"An error occurred: {e}")
 
 
 def create_prompt_user_response_matrix(user_response: dict) -> str:
@@ -193,6 +196,41 @@ def create_prompt_user_response_matrix(user_response: dict) -> str:
     return prompt
 
 
+def read_csv(path='data/irl_ed_qol.csv'):
+    df = pd.read_csv(path)
+    return df
+
+
+def get_primary_score(row, user_qol_sorted):
+    score = 0
+    for qol_factor, qol_score in user_qol_sorted:
+        score = score + (abs(qol_score - row[qol_factor]))
+    return score
+
+
+def get_secondary_score(row, user_qol_sorted):
+    score = 0
+    for qol_factor, qol_score in user_qol_sorted:
+        score = score + (abs(qol_score - row[qol_factor]))
+    return score
+
+
+def get_top_locations(df_qol: pd.DataFrame, user_qol: QualityOfLifeIndexes) -> pd.DataFrame:
+    """
+    Function to get top locations based on a QualityOfLifeIndex dataframe and user responses
+    :param df_qol: dataframe containing qol matrix for all regions
+    :param user_qol: QualityOfLifeIndexes object containing user responses
+    :return: dataframe containing qol matrix for top 5 matching regions
+    """
+    user_qol_dict = pd.json_normalize(user_qol.dict(), sep=":").to_dict(orient='records')[0]
+    user_qol_sorted = sorted(user_qol_dict.items(), key=lambda x: x[1], reverse=True)
+
+    df_qol['user_score_primary'] = df_qol.apply(lambda x: get_primary_score(x, user_qol_sorted[0:5]), axis=1)
+    df_qol['user_score_secondary'] = df_qol.apply(lambda x: get_secondary_score(x, user_qol_sorted), axis=1)
+    df_qol = df_qol.sort_values(by=['user_score_primary', 'user_score_secondary', 'QoL'])
+    return df_qol.iloc[0:5]
+
+
 user_response_dict = {
     "demographics": {
         "number_of_family_members": {
@@ -290,4 +328,6 @@ user_response_dict = {
 
 prompt = create_prompt_user_response_matrix(user_response_dict)
 parsed_response = get_openai_response(prompt)
-print(parsed_response)
+df_qol = read_csv()
+df_top_locations = get_top_locations(df_qol, parsed_response)
+print(df_top_locations)
