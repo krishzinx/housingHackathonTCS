@@ -12,7 +12,7 @@ os.environ["OPENAI_API_KEY"] = key
 
 
 def get_openai_response(prompt: str, model: str = "gpt-4o-mini", max_tokens: int = 500,
-                        temperature: float = 0.2) -> QualityOfLifeIndexes:
+                        temperature: float = 0) -> QualityOfLifeIndexes:
     """
     Connects to the OpenAI API and submits a prompt, returning the response.
 
